@@ -1,0 +1,24 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	overflow: hidden;
+}
+#svg{
+	height: 100vh;
+	width: 100vw;
+}
+#button{
+	position: absolute;
+	top: -5px;
+	left: -5px;
+	cursor: pointer;
+	border: solid 1px black;
+	background: black;
+	color: white;
+	padding: 5px;
+	border-radius: 5px;
+	font-size: 40px;
+	font-family: "Baloo Bhaijaan";
+}
