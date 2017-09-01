@@ -1,5 +1,3 @@
-//I'm gonna move this to github
-
 var config = {
 	apiKey: "AIzaSyAM18-ZHfKFsWZkuz11bn_0u8j1MznRR10",
 	authDomain: "cloud-draw-b7d82.firebaseapp.com",
@@ -73,3 +71,25 @@ function clear(){
 	});
 }
 document.getElementById("button").onclick = clear;
+
+s.ontouchmove = function(e){
+	e.preventDefault();
+	if(mouse){
+		p.setAttribute("d", d + "L" + e.touches[0].clientX + "," + e.touches[0].clientY + " ");
+		d = p.getAttribute("d");
+		ref.set({
+			color: "bada55",
+			line: d,
+			id: id
+		});
+	}
+}
+s.ontouchend = function(){
+	mouse = false;
+}
+s.ontouchstart = function(e){
+	e.preventDefault();
+	p.setAttribute("d", d + "M" + e.touches[0].clientX + "," + e.touches[0].clientY + " ");
+	d = p.getAttribute("d");
+	mouse = true;
+}
