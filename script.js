@@ -1,6 +1,3 @@
-//Also on github, if you want fullscreen
-//
-
 var config = {
 	apiKey: "AIzaSyAM18-ZHfKFsWZkuz11bn_0u8j1MznRR10",
 	authDomain: "cloud-draw-b7d82.firebaseapp.com",
