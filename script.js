@@ -1,3 +1,6 @@
+//Also on github, if you want fullscreen
+//
+
 var config = {
 	apiKey: "AIzaSyAM18-ZHfKFsWZkuz11bn_0u8j1MznRR10",
 	authDomain: "cloud-draw-b7d82.firebaseapp.com",
@@ -29,7 +32,7 @@ s.onmousemove = function(e){
 		p.setAttribute("d", d + "L" + e.clientX + "," + e.clientY + " ");
 		d = p.getAttribute("d");
 		ref.set({
-			color: "bada55",
+			color: color,
 			line: d,
 			id: id
 		});
@@ -65,7 +68,7 @@ function clear(){
 	d = "M0,0 ";
 	p.setAttribute("d", d);
 	ref.set({
-		color: "bada55",
+		color: color,
 		line: d,
 		id: id
 	});
@@ -78,7 +81,7 @@ s.ontouchmove = function(e){
 		p.setAttribute("d", d + "L" + e.touches[0].clientX + "," + e.touches[0].clientY + " ");
 		d = p.getAttribute("d");
 		ref.set({
-			color: "bada55",
+			color: color,
 			line: d,
 			id: id
 		});
